@@ -11,16 +11,26 @@ public class Converter
         if (WavFiles.Count > 0)
         {
             Console.WriteLine($"Found {WavFiles.Count} wav files.");
-            // WavFiles.AsParallel().ForAll(file =>
-            // {
-            //     var flacFile = Path.ChangeExtension(file, ".flac");
-            //     var p = Process.Start($"./ffmpeg.exe -i \"{file}\" \"{flacFile}\"");
-            //     p.WaitForExit();
-            //     if (p.ExitCode == 0)
-            //         Console.WriteLine($"Converted: {file}");
-            //     else
-            //         Console.WriteLine($"Failed to convert: {file}");
-            // });
+            WavFiles.AsParallel().ForAll(file =>
+            {
+                try
+                {
+                    var flacFile = Path.ChangeExtension(file, ".flac");
+                    var p = Process.Start($"ffmpeg.exe", $"-loglevel warning -i \"{file}\" \"{flacFile}\"");
+                    p.WaitForExit();
+                    if (p.ExitCode == 0)
+                    {
+                        File.Delete(file); // Delete the original wav file
+                        Console.WriteLine($"Converted: {file}");
+                    }
+                    else
+                        Console.WriteLine($"Failed to convert: {file}");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Failed to start process. Error: {e.Message}");
+                }
+            });
         }
     }
 
