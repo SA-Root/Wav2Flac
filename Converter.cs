@@ -16,6 +16,10 @@ public class Converter
                 try
                 {
                     var flacFile = Path.ChangeExtension(file, ".flac");
+                    if (File.Exists(flacFile))
+                    {
+                        return;
+                    }
                     var p = Process.Start($"ffmpeg.exe", $"-loglevel warning -i \"{file}\" \"{flacFile}\"");
                     p.WaitForExit();
                     if (p.ExitCode == 0)
