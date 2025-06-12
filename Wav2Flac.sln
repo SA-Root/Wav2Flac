@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wav2Flac", "Wav2Flac.csproj", "{BCFCE39B-9DF1-6D8F-476A-395F1664AE03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCFCE39B-9DF1-6D8F-476A-395F1664AE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFCE39B-9DF1-6D8F-476A-395F1664AE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFCE39B-9DF1-6D8F-476A-395F1664AE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFCE39B-9DF1-6D8F-476A-395F1664AE03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7138A8B0-09C1-4095-B049-EB7BA78CE7A7}
+	EndGlobalSection
+EndGlobal

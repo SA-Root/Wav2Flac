@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TieredPGO>true</TieredPGO>
+    <PublishAot>true</PublishAot>
+    <Product>Vinewood WAV to FLAC Converter</Product>
+    <Title>Vinewood WAV to FLAC Converter</Title>
+    <Company>Advanced Prototype Dynamics</Company>
+    <FileVersion>1.0.2506.0</FileVersion>
+    <Copyright>Advanced Prototype Dynamics© 2025</Copyright>
+    <Version>1.0.2506.0</Version>
+  </PropertyGroup>
+
+</Project>
